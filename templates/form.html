@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block title %}
+    Step form
+{% endblock %}
+
+{% block body %}
+<div class="container col-lg-8">
+    <h4 class="mb-3">Report for the day</h4>
+    <form class="needs-validation" novalidate="", method="post">
+      <div class="row g-3">
+        <div class="col-sm-6">
+          <label for="firstName" class="form-label">First name</label>
+          <input type="text" class="form-control" name="firstName" id="firstName" placeholder="" value="" required="">
+        </div>
+
+        <div class="col-sm-6">
+          <label for="lastName" class="form-label">Last name</label>
+          <input type="text" class="form-control" name="lastName" id="lastName" placeholder="" value="" required="">
+        </div>
+
+        <div class="col-12">
+          <label for="Number" class="form-label">Number of steps</label>
+          <input type="number" class="form-control" name="steps" id="steps" placeholder="10000">
+        </div>
+
+        <div class="col-12">
+          <label for="address" class="form-label">Date</label>
+          <input type="date" class="form-control" name="date" id="date" placeholder="02.04.2024" required="">
+        </div>
+
+      <hr class="my-4">
+
+      <button class="w-100 btn btn-primary btn-lg" type="submit">Apply</button>
+    </form>
+  </div>
+{% endblock %}  

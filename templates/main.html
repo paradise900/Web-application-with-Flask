@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block title %}
+    Main page
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <h1>Main page</h1>
+    <h2>Total steps: {{ total_steps }}</h2>
+    {% for el in articles %}
+    <div class="alert alert-info">
+        <h2>Steps number: {{el.steps }}</h2>
+        <p><b>Date: {{ el.date }}</b></p>
+        <p>Name: {{ el.firstName }}</p>
+        <p>Surname: {{ el.lastName }}</p>
+        <a href="/{{el.id}}/del" class="btn btn-primary">Delete</a>
+    </div>  
+    {% endfor %}
+    <a href="/del_all" class="btn btn-danger">Delete all posts</a>
+</div>
+
+{% endblock %}
